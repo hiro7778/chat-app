@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'messages/index'
+  devise_for :users
   root to: "messages#index" #ルーティング設定
+  resources :users, only: [:edit, :update] #usersのルーティング設定
 end
