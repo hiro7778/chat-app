@@ -1,4 +1,8 @@
 class RoomsController < ApplicationController
+
+  def index
+  end
+
   def new
     @room = Room.new  #@roomはviews/rooms/new.html.erbに代入してる
   end
