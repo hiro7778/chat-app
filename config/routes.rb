@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   root to: "rooms#index" #ルーティング設定
   resources :users, only: [:edit, :update] #usersのルーティング設定
   resources :rooms, only: [:new, :create] #roomsのルーティング設定
+  resources :room, only: [:new, :create] do
+    resources :messages, only: [:index, :create]
+  end
 end
